@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Fun Facts</string>
     <string name="titleTextView">Did you know?</string>
-    <string name="factTextView">Kucing dapat makan apa saja yang dia bisa pada saat kelaparan, ironisnya kerupuk udang pun disantap oleh mereka.</string>
+    <string name="factTextView">Google\'s founders were willing to sell to Excite for under $1 million in 1999—but Excite turned them down</string>
     <string name="factButton">Show Another Fact</string>
 </resources>

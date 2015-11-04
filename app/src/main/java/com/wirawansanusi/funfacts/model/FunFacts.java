@@ -1,13 +1,13 @@
-package com.wirawansanusi.funfacts;
-
-import java.util.Random;
+package com.wirawansanusi.funfacts.model;
 
 /**
  * Created by wirawansanusi on 11/1/15.
  */
 public class FunFacts {
 
-    public String getFact() {
+    private String[] mFacts;
+
+    public FunFacts() {
 
         String[] facts = {
                 "Google's founders were willing to sell to Excite for under $1 million in 1999—but Excite turned them down",
@@ -20,13 +20,19 @@ public class FunFacts {
                 "In a 2008 survey, 58% of British teens thought Sherlock Holmes was a real guy, while 20% thought Winston Churchill was not",
                 "At one point in the 1990s, 50% of all CDs produced worldwide were for AOL",
                 "Toy companies failed to duplicate the success of Theodore Roosevelt's teddy bear with William Taft's \"Billy Possum",
-                "Nutella was invented during WWII, when an Italian pastry maker mixed hazelnuts into chocolate to extend his chocolate ration"
+                "Nutella was invented during WWII, when an Italian pastry maker mixed hazelnuts into chocolate to extend his chocolate ration",
+                "For more facts, visit http://mentalfloss.com/article/52275/65-amazing-facts-will-blow-your-mind"
         };
+        mFacts = facts;
+    }
 
-        Random random = new Random();
-        int randomNumber = random.nextInt(facts.length);
-        String fact = facts[randomNumber];
+    public String getFact(int factNumber) {
 
-        return fact;
+        return mFacts[factNumber];
+    }
+
+    public int getTotalFact() {
+
+        return mFacts.length;
     }
 }

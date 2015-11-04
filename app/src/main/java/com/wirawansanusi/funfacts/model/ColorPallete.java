@@ -1,15 +1,15 @@
-package com.wirawansanusi.funfacts;
+package com.wirawansanusi.funfacts.model;
 
 import android.graphics.Color;
-
-import java.util.Random;
 
 /**
  * Created by wirawansanusi on 11/1/15.
  */
 public class ColorPallete {
 
-    public int getColor() {
+    private String[] mColors;
+
+    public ColorPallete() {
 
         String[] colors = {
                 "#39add1", // light blue
@@ -26,10 +26,13 @@ public class ColorPallete {
                 "#f092b0", // pink
                 "#b7c0c7"  // light gray
         };
+        mColors = colors;
+    }
 
-        Random random = new Random();
-        int randomNumber = random.nextInt(colors.length);
-        int color = Color.parseColor(colors[randomNumber]);
+    public int getColor(int colorNumber) {
+
+        String color_string = mColors[colorNumber];
+        int color = Color.parseColor(color_string);
 
         return color;
     }
